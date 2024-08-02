@@ -5,7 +5,8 @@ A aplicação Beedoo Challenge, desenvolvida em plataforma WEB, foi desenvolvido
 O principal objetivo da aplicação é viabilizar de maneira fácil e intuitiva a oferta do cadastro dos cursos aos instrutores bem como a visualização dos mesmos pelos alunos proporcionando seguraça para ambos.
    
 
-## Tomada de Decisão
+## Tomada de Decisão  ![image](https://github.com/user-attachments/assets/02ba4cef-56ce-41d4-88c8-337b8ca78a78)
+
 
 Ao identificar as duas principais funcionalidades: Cadastro de cursos e Listagem de cursos, iremos focar em requisitos específicos:
 
@@ -22,12 +23,14 @@ Quero ( Ação )
 
 Para ( Intenção )
 
-## User Stories
+## User Stories  ![image](https://github.com/user-attachments/assets/6a16b4b2-665c-4bd6-9ab1-461a015bab32)
+
 
 As User Stories do usuário da aplicação Beedoo Challenge são criadas baseadas nas principais funcionalidades cadastrar, listar e exlcuir cursos na plataforma.
 Serão necessário a criação de perfis diferentes para o acesso à plataforma: Admin, instrutor e aluno. Esta necessidade se dá por questões de controle e segurança de como as informações serão acessadas e inseridas na plataforma. Seguiremos com as User Stories baseadas no perfil de Admin pois o mesmo será o único que receberá as permissões full para inserção, consulta e exclusão dos cursos. Este tipo de usuário também será o responsável pela gestão dos perfis de aluno e instrutor, sendo o único que poderá excluir tais perfis.
 
-<b>Feature 'Cadastrar Curso'</b><br>
+<b>![image](https://github.com/user-attachments/assets/07556581-7200-47ab-8c6c-2d7406b96e37)
+Feature 'Cadastrar Curso'</b><br>
 Como admin <br>
 quero criar um novo curso <br>
 para adicionar novos cursos na plataforma.
@@ -42,7 +45,8 @@ O usuário deve preencher URLs válidas
 O usuário deve preencher o número de vagas com um valor positivo maior que 1
 O usuário deve visualizar uma mensagem de sucesso ao efetuar o cadastro do curso de forma correta.
 
-<b>Feature 'Listar cursos'</b><br>
+<b>![image](https://github.com/user-attachments/assets/6bbae7a0-f1db-49d5-b2a9-d477d76b12dd)
+Feature 'Listar cursos'</b><br>
 Como admin <br>
 quero listar todos os cursos cadastrados na plataforma <br>
 para visualizar e gerenciar os cursos cadastrados.
@@ -53,7 +57,8 @@ Estar somente disponível o acesso para usuários tipo Admin.
 O usuário deve conseguir consultar todos os dados referentes ao curso, todos os registros cadastrados devem ser mostrados.
 O usuário deve poder excluir cursos diretamente da lista de cursos.
 
-<b>Feature 'Excluir cursos'</b><br>
+<b>![image](https://github.com/user-attachments/assets/000f8f35-8bc5-4481-b25c-76038cb9f19c)
+Feature 'Excluir cursos'</b><br>
 Como admin <br>
 quero realizar a exclusão um curso préviamente cadastrado <br>
 para manter a plataforma atualizada e limpa.

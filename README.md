@@ -31,7 +31,7 @@ Serão necessário a criação de perfis diferentes para o acesso à plataforma:
 
 <b>![image](https://github.com/user-attachments/assets/07556581-7200-47ab-8c6c-2d7406b96e37)
 Feature 'Cadastrar Curso'</b><br>
-Como admin <br>
+Como usuário instrutor <br>
 quero criar um novo curso <br>
 para adicionar novos cursos na plataforma.
 
@@ -71,7 +71,109 @@ O usuário deve visualizar uma mensagem de confirmação quando um curso for exc
 O curso deve ser retirado da lista de cursos não podendo mais ser visualizado após a exclusão.
 
 
+## Cenários de Testes
 
-1. A página inicial deve listar todos os cursos disponíveis.
-2. Cada curso listado deve mostrar pelo menos o nome do curso e a descrição.
-3. Ao clicar no nome de um curso, os detalhes completos do curso devem ser exibidos.
+![image](https://github.com/user-attachments/assets/32d61fb4-3dac-4a98-a577-18d6ed4b3f9f)
+<b>CENÁRIO:</b> Cadastro válido <br><br>
+GIVEN acesso a página 'Cadastrar Curso' <br>
+AND preencho todos os campos de forma válida <br>
+WHEN clico no botão Cadastrar curso <br>
+THEN devo visualizar uma mensagem de curso cadastrado <br>
+AND devo poder visualizar o curso na página  Listar de Cursos
+
+
+![image](https://github.com/user-attachments/assets/d6f820c4-a37d-46f7-8f54-e65647fa3f62)
+<b>CENÁRIO:</b> Cadastro válido de curso online <br><br>
+GIVEN acesso a página 'Cadastrar Curso' <br>
+AND preencho todos os campos de forma válida <br>
+AND seleciono o tipo de curso online <br>
+WHEN clico no botão Cadastrar curso <br>
+THEN devo visualizar uma mensagem de curso cadastrado <br>
+AND devo poder visualizar o curso com modalidade online na página  Listar de Cursos
+
+![image](https://github.com/user-attachments/assets/4781b53c-ab1c-4342-9a41-143f65bf62c9)
+<b>CENÁRIO:</b> Cadastro válido de curso presencial<br><br>
+GIVEN acesso a página 'Cadastrar Curso' <br>
+AND preencho todos os campos de forma válida <br>
+AND seleciono o tipo de curso presencial <br>
+WHEN clico no botão Cadastrar curso <br>
+THEN devo visualizar uma mensagem de curso cadastrado <br>
+AND devo poder visualizar o curso com modalidade presencial na página  Listar de Cursos
+
+![image](https://github.com/user-attachments/assets/04bf30b3-f363-4b9f-91c8-554aff2ff220)
+<b>CENÁRIO:</b> Cadastro inválido (campo vazio) <br><br>
+GIVEN acesso a página 'Cadastrar Curso' <br>
+AND preencho os campos de forma válida <br>
+AND deixo um campo sem preencher <br>
+WHEN clico no botão Cadastrar curso <br>
+THEN devo visualizar uma mensagem de curso não cadastrado <br>
+AND uma mensagem de aviso indicando os campos não preenchidos deverá ser exibida
+
+![image](https://github.com/user-attachments/assets/e87a3afa-dffb-45e8-b78f-fd5d333a4b08)
+<b>CENÁRIO:</b> Cadastro inválido e url da imagem inválida <br><br>
+GIVEN acesso a página 'Cadastrar Curso' <br>
+AND preencho os campos de forma válida <br>
+AND preencho uma URL da imagem inválida <br>
+WHEN clico no botão Cadastrar curso <br>
+THEN devo visualizar uma mensagem de curso não cadastrado <br>
+AND uma mensagem de aviso indicando que os campos foram preenchidos de forma incorreta
+
+![image](https://github.com/user-attachments/assets/c3341aa5-1a09-4c0e-ad35-d94f0dd503ef)
+<b>CENÁRIO:</b> Cadastro inválido e datas inválidas <br><br>
+GIVEN acesso a página 'Cadastrar Curso' <br>
+AND preencho os campos de forma válida <br>
+AND preencho uma data inválida <br>
+WHEN clico no botão Cadastrar curso <br>
+THEN devo visualizar uma mensagem de curso não cadastrado <br>
+AND uma mensagem de aviso indicando que os campos foram preenchidos de forma incorreta<br>
+
+![image](https://github.com/user-attachments/assets/a9ae8699-6e41-40fe-a004-18ca3f0083b1)
+<b>CENÁRIO:</b> Listar cursos <br><br>
+GIVEN acesso a página 'Listar Cursos' <br>
+WHEN clico no botão Listar cursos <br>
+THEN devo visualizar todos os cursos cadastrados <br>
+
+![image](https://github.com/user-attachments/assets/d125bd1b-c439-4731-a7e6-9d9ab77c5f9e)
+<b>CENÁRIO:</b> Visualizar cursos <br><br>
+GIVEN acesso a página 'Listar Cursos' <br>
+AND clico no botão Listar cursos <br>
+WHEN clico no curso <br>
+THEN devo visualizar todos os dados de um curso cadastrado <br>
+
+![image](https://github.com/user-attachments/assets/e3000e02-0575-4785-857c-cd63f9df7fd9)
+<b>CENÁRIO:</b> Excluir cursos <br><br>
+GIVEN acesso a página 'Litar Cursos' <br>
+WHEN clico em 'Excluir curso' no registro do curso a ser excluído <br>
+THEN uma mensagem de aviso indicando que a exclusão ocorreu com sucesso deverá ser visualizada<br>
+
+![image](https://github.com/user-attachments/assets/c3341aa5-1a09-4c0e-ad35-d94f0dd503ef)
+<b>CENÁRIO:</b> Cadastro inválido e número de vagas inválido<br><br>
+GIVEN acesso a página 'Cadastrar Curso' <br>
+AND preencho os campos de forma válida <br>
+AND preencho o campo 'Número de vagas' com -1 ou 0 <br>
+WHEN clico no botão Cadastrar curso <br>
+THEN devo visualizar uma mensagem de curso não cadastrado <br>
+AND uma mensagem de aviso indicando que os campos foram preenchidos de forma incorreta<br>
+
+
+## Pontos de melhoria  ![image](https://github.com/user-attachments/assets/08917731-c46c-4673-a076-3a5950bf8b93)
+
+
+Como pontos de melhorias futuras afim de melhorar a experiência do usuário na utilização da plataforma destaco as seguintes features.
+
+- Implementação de uma tela de login de usuário para diferênciar os tipo de de usuários da plataforma (Admin, Intrutor e Aluno)<br><br>
+- Implementação dos tipos de usuários: Admin (full Access), instrutor (Alterar informações do curso) e Aluno (Listar os cursos e realizá-los)<br><br>
+- Implementação de opção de editar curso para os perfis Admin e Instrutor<br><br>
+- Implementação de um limite de caracteres para o campo Nome do curso<br><br>
+- Implementação de um limite de caracteres para o campo Descrição do curso<br><br>
+- Implementação de um limite de caracteres para o campo Instrutor do curso<br><br>
+- Implementação de um valor limite no número de vagas do curso para que ele seja positivo<br><br>
+- Implementação de validação no campo data para que a data de fim do curso sempre seja posterior a data de inicio<br><br>
+- Implementação de uma opção para avaliação de curso	afim de monitorar a qualidade dos cursos ofertados mediante feedback dos alunos<br><br>
+- Implementação de acessibilidade em libras para deficientes auditivos nos cursos<br><br>
+- Implementação de opção de idioma em inglês para toda a plataforma incluindo os cursos possibilitando assim abertura exponencial no leque de alunos<br><br>
+- Implementação de uma seção de Status do curso para que o aluno possa acompanhar a sua evolução<br><br>
+- Implementação de um botão de compartilhamento do curso<br><br>
+
+
+

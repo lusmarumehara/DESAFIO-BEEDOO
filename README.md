@@ -77,7 +77,7 @@ O curso deve ser retirado da lista de cursos não podendo mais ser visualizado a
 
 
 ![image](https://github.com/user-attachments/assets/32d61fb4-3dac-4a98-a577-18d6ed4b3f9f)
-<b>CENÁRIO:</b> Cadastro válido <br><br>
+<b>CENÁRIO CT-001:</b> Cadastro válido <br><br>
 GIVEN que estou logado como usuário instrutor ou admin<br>
 AND acesso a página 'Cadastrar Curso' <br>
 AND preencho todos os campos de forma válida <br>
@@ -87,7 +87,7 @@ AND devo poder visualizar o curso na página  Listar de Cursos
 
 
 ![image](https://github.com/user-attachments/assets/d6f820c4-a37d-46f7-8f54-e65647fa3f62)
-<b>CENÁRIO:</b> Cadastro válido de curso online <br><br>
+<b>CENÁRIO CT-002:</b> Cadastro válido de curso online <br><br>
 GIVEN que estou logado como usuário instrutor ou admin<br>
 AND acesso a página 'Cadastrar Curso' <br>
 AND preencho todos os campos de forma válida <br>
@@ -97,7 +97,7 @@ THEN devo visualizar uma mensagem de curso cadastrado <br>
 AND devo poder visualizar o curso com modalidade online na página  Listar de Cursos
 
 ![image](https://github.com/user-attachments/assets/4781b53c-ab1c-4342-9a41-143f65bf62c9)
-<b>CENÁRIO:</b> Cadastro válido de curso presencial<br><br>
+<b>CENÁRIO CT-003:</b> Cadastro válido de curso presencial<br><br>
 GIVEN que estou logado como usuário instrutor ou admin<br>
 AND acesso a página 'Cadastrar Curso' <br>
 AND preencho todos os campos de forma válida <br>
@@ -107,7 +107,7 @@ THEN devo visualizar uma mensagem de curso cadastrado <br>
 AND devo poder visualizar o curso com modalidade presencial na página  Listar de Cursos
 
 ![image](https://github.com/user-attachments/assets/04bf30b3-f363-4b9f-91c8-554aff2ff220)
-<b>CENÁRIO:</b> Cadastro inválido (campo vazio) <br><br>
+<b>CENÁRIO CT-004:</b> Cadastro inválido (campo vazio) <br><br>
 GIVEN que estou logado como usuário instrutor ou admin<br>
 AND acesso a página 'Cadastrar Curso' <br>
 AND deixo todos os campos sem preencher <br>
@@ -116,7 +116,7 @@ THEN devo visualizar uma mensagem de curso não cadastrado <br>
 AND uma mensagem de aviso indicando os campos não preenchidos deverá ser exibida
 
 ![image](https://github.com/user-attachments/assets/e87a3afa-dffb-45e8-b78f-fd5d333a4b08)
-<b>CENÁRIO:</b> Cadastro inválido e url da imagem inválida <br><br>
+<b>CENÁRIO CT-005:</b> Cadastro inválido e url da imagem inválida <br><br>
 GIVEN que estou logado como usuário instrutor ou admin<br>
 AND acesso a página 'Cadastrar Curso' <br>
 AND preencho os campos de forma válida <br>
@@ -126,7 +126,7 @@ THEN devo visualizar uma mensagem de curso não cadastrado <br>
 AND uma mensagem de aviso indicando que os campos foram preenchidos de forma incorreta
 
 ![image](https://github.com/user-attachments/assets/c3341aa5-1a09-4c0e-ad35-d94f0dd503ef)
-<b>CENÁRIO:</b> Cadastro inválido e datas inválidas <br><br>
+<b>CENÁRIO CT-006:</b> Cadastro inválido e datas inválidas <br><br>
 GIVEN que estou logado como usuário instrutor ou admin<br>
 AND acesso a página 'Cadastrar Curso' <br>
 AND preencho os campos de forma válida <br>
@@ -136,14 +136,14 @@ THEN devo visualizar uma mensagem de curso não cadastrado <br>
 AND uma mensagem de aviso indicando que os campos foram preenchidos de forma incorreta<br>
 
 ![image](https://github.com/user-attachments/assets/a9ae8699-6e41-40fe-a004-18ca3f0083b1)
-<b>CENÁRIO:</b> Listar cursos <br><br>
+<b>CENÁRIO CT-007:</b> Listar cursos <br><br>
 GIVEN que estou logado como usuário instrutor ou admin ou aluno<br>
 AND acesso a página 'Cadastrar Curso' <br>
 WHEN clico no botão Listar cursos <br>
 THEN devo visualizar todos os cursos cadastrados <br>
 
 ![image](https://github.com/user-attachments/assets/d125bd1b-c439-4731-a7e6-9d9ab77c5f9e)
-<b>CENÁRIO:</b> Visualizar cursos <br><br>
+<b>CENÁRIO CT-008:</b> Visualizar cursos <br><br>
 GIVEN que estou logado como usuário instrutor ou admin ou aluno<br>
 AND acesso a página 'Cadastrar Curso' <br>
 AND clico no botão Listar cursos <br>
@@ -151,14 +151,14 @@ WHEN clico no curso <br>
 THEN devo visualizar todos os dados de um curso cadastrado <br>
 
 ![image](https://github.com/user-attachments/assets/e3000e02-0575-4785-857c-cd63f9df7fd9)
-<b>CENÁRIO:</b> Excluir cursos <br><br>
+<b>CENÁRIO CT-009:</b> Excluir cursos <br><br>
 GIVEN que estou logado como usuário admin<br>
 AND acesso a página 'Cadastrar Curso' <br>
 WHEN clico em 'Excluir curso' no registro do curso a ser excluído <br>
 THEN uma mensagem de aviso indicando que a exclusão ocorreu com sucesso deverá ser visualizada<br>
 
 ![image](https://github.com/user-attachments/assets/c3341aa5-1a09-4c0e-ad35-d94f0dd503ef)
-<b>CENÁRIO:</b> Cadastro inválido e número de vagas inválido<br><br>
+<b>CENÁRIO CT-0010:</b> Cadastro inválido e número de vagas inválido<br><br>
 GIVEN que estou logado como usuário instrutor ou admin<br>
 AND acesso a página 'Cadastrar Curso' <br>
 AND preencho os campos de forma válida <br>
@@ -168,7 +168,7 @@ THEN devo visualizar uma mensagem de curso não cadastrado <br>
 AND uma mensagem de aviso indicando que os campos foram preenchidos de forma incorreta<br><br>
 
 Link para planilha: 
-<a href="https://docs.google.com/spreadsheets/d/1V8pIjj1hTzgkfk3RVs920H_t983XB8TfUg1WmD9YJUc/edit?usp=sharing" target=blank>Resultados dos Testes</a>
+<a href="https://docs.google.com/spreadsheets/d/1V8pIjj1hTzgkfk3RVs920H_t983XB8TfUg1WmD9YJUc/edit?usp=sharing" target="_blank">Resultados dos Testes</a>
 
 
 ## Pontos de melhoria  ![image](https://github.com/user-attachments/assets/08917731-c46c-4673-a076-3a5950bf8b93)

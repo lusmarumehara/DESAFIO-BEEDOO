@@ -72,7 +72,9 @@ O usuário deve visualizar uma mensagem de confirmação quando um curso for exc
 O curso deve ser retirado da lista de cursos não podendo mais ser visualizado após a exclusão.
 
 
-## Cenários de Testes
+## Cenários de Testes  ![image](https://github.com/user-attachments/assets/8b5edc21-20b3-4f47-8d3c-6554255f1fdf)
+
+
 
 ![image](https://github.com/user-attachments/assets/32d61fb4-3dac-4a98-a577-18d6ed4b3f9f)
 <b>CENÁRIO:</b> Cadastro válido <br><br>

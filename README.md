@@ -27,17 +27,18 @@ Para ( Intenção )
 
 
 As User Stories do usuário da aplicação Beedoo Challenge são criadas baseadas nas principais funcionalidades cadastrar, listar e exlcuir cursos na plataforma.
-Serão necessário a criação de perfis diferentes para o acesso à plataforma: Admin, instrutor e aluno. Esta necessidade se dá por questões de controle e segurança de como as informações serão acessadas e inseridas na plataforma. Seguiremos com as User Stories baseadas no perfil de Admin pois o mesmo será o único que receberá as permissões full para inserção, consulta e exclusão dos cursos. Este tipo de usuário também será o responsável pela gestão dos perfis de aluno e instrutor, sendo o único que poderá excluir tais perfis.
+Serão necessário a criação de perfis diferentes para o acesso à plataforma: Admin, instrutor e aluno. Esta necessidade se dá por questões de controle e segurança de como as informações serão acessadas e inseridas na plataforma. 
+Seguiremos com as User Stories baseadas no perfil de Admin que receberá as permissões full para inserção, consulta e exclusão dos cursos. Este tipo de usuário também será o responsável pela gestão dos perfis de aluno e instrutor, sendo o único que poderá excluir tais perfis. O perfil de instrutor receberá a permissão de inclusão e alteração de cursos. O perfil de aluno receberá a permissão de visualizar e realizar os cursos. Cada perfil visualizará o que lhe é permitido, por exemplo o Admin terá acesso a uma área onde haverá o gerenciamento dos perfis e visualizará a opção exlcuir um curso, o instrutor visualizará a inserção e edição dos cursos e o aluno somente visualizará o curso sem opções de exclusão ou edição.
 
 <b>![image](https://github.com/user-attachments/assets/07556581-7200-47ab-8c6c-2d7406b96e37)
 Feature 'Cadastrar Curso'</b><br>
-Como usuário instrutor <br>
+Como usuário admin ou instrutor <br>
 quero criar um novo curso <br>
 para adicionar novos cursos na plataforma.
 
 Critérios de Aceite:
 
-Estar somente disponível o acesso para usuários tipo Admin.
+Estar somente disponível o acesso para usuários tipo Admin e instrutor.
 O usuário deve inserir todos os dados referentes ao curso, todos os campos são obrigatórios.
 O usuário deve ser notificado caso algum campo não tenha sido preenchido de forma adequada com a sugestão de preenchimento correta.
 O usuário deve preencher o campo 'Data de Fim' com uma data superior a 'Data de Inicio'
@@ -47,19 +48,19 @@ O usuário deve visualizar uma mensagem de sucesso ao efetuar o cadastro do curs
 
 <b>![image](https://github.com/user-attachments/assets/6bbae7a0-f1db-49d5-b2a9-d477d76b12dd)
 Feature 'Listar cursos'</b><br>
-Como admin <br>
+Como usuário admin ou instrutor ou aluno <br>
 quero listar todos os cursos cadastrados na plataforma <br>
 para visualizar e gerenciar os cursos cadastrados.
 
 Critérios de Aceite:
 
-Estar somente disponível o acesso para usuários tipo Admin.
+Estar disponível o acesso para todos usuários.
 O usuário deve conseguir consultar todos os dados referentes ao curso, todos os registros cadastrados devem ser mostrados.
 O usuário deve poder excluir cursos diretamente da lista de cursos.
 
 <b>![image](https://github.com/user-attachments/assets/000f8f35-8bc5-4481-b25c-76038cb9f19c)
 Feature 'Excluir cursos'</b><br>
-Como admin <br>
+Como usuário admin <br>
 quero realizar a exclusão um curso préviamente cadastrado <br>
 para manter a plataforma atualizada e limpa.
 
@@ -75,7 +76,8 @@ O curso deve ser retirado da lista de cursos não podendo mais ser visualizado a
 
 ![image](https://github.com/user-attachments/assets/32d61fb4-3dac-4a98-a577-18d6ed4b3f9f)
 <b>CENÁRIO:</b> Cadastro válido <br><br>
-GIVEN acesso a página 'Cadastrar Curso' <br>
+GIVEN que estou logado como usuário instrutor ou admin<br>
+AND acesso a página 'Cadastrar Curso' <br>
 AND preencho todos os campos de forma válida <br>
 WHEN clico no botão Cadastrar curso <br>
 THEN devo visualizar uma mensagem de curso cadastrado <br>
@@ -84,7 +86,8 @@ AND devo poder visualizar o curso na página  Listar de Cursos
 
 ![image](https://github.com/user-attachments/assets/d6f820c4-a37d-46f7-8f54-e65647fa3f62)
 <b>CENÁRIO:</b> Cadastro válido de curso online <br><br>
-GIVEN acesso a página 'Cadastrar Curso' <br>
+GIVEN que estou logado como usuário instrutor ou admin<br>
+AND acesso a página 'Cadastrar Curso' <br>
 AND preencho todos os campos de forma válida <br>
 AND seleciono o tipo de curso online <br>
 WHEN clico no botão Cadastrar curso <br>
@@ -93,7 +96,8 @@ AND devo poder visualizar o curso com modalidade online na página  Listar de Cu
 
 ![image](https://github.com/user-attachments/assets/4781b53c-ab1c-4342-9a41-143f65bf62c9)
 <b>CENÁRIO:</b> Cadastro válido de curso presencial<br><br>
-GIVEN acesso a página 'Cadastrar Curso' <br>
+GIVEN que estou logado como usuário instrutor ou admin<br>
+AND acesso a página 'Cadastrar Curso' <br>
 AND preencho todos os campos de forma válida <br>
 AND seleciono o tipo de curso presencial <br>
 WHEN clico no botão Cadastrar curso <br>
@@ -102,16 +106,17 @@ AND devo poder visualizar o curso com modalidade presencial na página  Listar d
 
 ![image](https://github.com/user-attachments/assets/04bf30b3-f363-4b9f-91c8-554aff2ff220)
 <b>CENÁRIO:</b> Cadastro inválido (campo vazio) <br><br>
-GIVEN acesso a página 'Cadastrar Curso' <br>
-AND preencho os campos de forma válida <br>
-AND deixo um campo sem preencher <br>
+GIVEN que estou logado como usuário instrutor ou admin<br>
+AND acesso a página 'Cadastrar Curso' <br>
+AND deixo todos os campos sem preencher <br>
 WHEN clico no botão Cadastrar curso <br>
 THEN devo visualizar uma mensagem de curso não cadastrado <br>
 AND uma mensagem de aviso indicando os campos não preenchidos deverá ser exibida
 
 ![image](https://github.com/user-attachments/assets/e87a3afa-dffb-45e8-b78f-fd5d333a4b08)
 <b>CENÁRIO:</b> Cadastro inválido e url da imagem inválida <br><br>
-GIVEN acesso a página 'Cadastrar Curso' <br>
+GIVEN que estou logado como usuário instrutor ou admin<br>
+AND acesso a página 'Cadastrar Curso' <br>
 AND preencho os campos de forma válida <br>
 AND preencho uma URL da imagem inválida <br>
 WHEN clico no botão Cadastrar curso <br>
@@ -120,7 +125,8 @@ AND uma mensagem de aviso indicando que os campos foram preenchidos de forma inc
 
 ![image](https://github.com/user-attachments/assets/c3341aa5-1a09-4c0e-ad35-d94f0dd503ef)
 <b>CENÁRIO:</b> Cadastro inválido e datas inválidas <br><br>
-GIVEN acesso a página 'Cadastrar Curso' <br>
+GIVEN que estou logado como usuário instrutor ou admin<br>
+AND acesso a página 'Cadastrar Curso' <br>
 AND preencho os campos de forma válida <br>
 AND preencho uma data inválida <br>
 WHEN clico no botão Cadastrar curso <br>
@@ -129,26 +135,30 @@ AND uma mensagem de aviso indicando que os campos foram preenchidos de forma inc
 
 ![image](https://github.com/user-attachments/assets/a9ae8699-6e41-40fe-a004-18ca3f0083b1)
 <b>CENÁRIO:</b> Listar cursos <br><br>
-GIVEN acesso a página 'Listar Cursos' <br>
+GIVEN que estou logado como usuário instrutor ou admin ou aluno<br>
+AND acesso a página 'Cadastrar Curso' <br>
 WHEN clico no botão Listar cursos <br>
 THEN devo visualizar todos os cursos cadastrados <br>
 
 ![image](https://github.com/user-attachments/assets/d125bd1b-c439-4731-a7e6-9d9ab77c5f9e)
 <b>CENÁRIO:</b> Visualizar cursos <br><br>
-GIVEN acesso a página 'Listar Cursos' <br>
+GIVEN que estou logado como usuário instrutor ou admin ou aluno<br>
+AND acesso a página 'Cadastrar Curso' <br>
 AND clico no botão Listar cursos <br>
 WHEN clico no curso <br>
 THEN devo visualizar todos os dados de um curso cadastrado <br>
 
 ![image](https://github.com/user-attachments/assets/e3000e02-0575-4785-857c-cd63f9df7fd9)
 <b>CENÁRIO:</b> Excluir cursos <br><br>
-GIVEN acesso a página 'Litar Cursos' <br>
+GIVEN que estou logado como usuário admin<br>
+AND acesso a página 'Cadastrar Curso' <br>
 WHEN clico em 'Excluir curso' no registro do curso a ser excluído <br>
 THEN uma mensagem de aviso indicando que a exclusão ocorreu com sucesso deverá ser visualizada<br>
 
 ![image](https://github.com/user-attachments/assets/c3341aa5-1a09-4c0e-ad35-d94f0dd503ef)
 <b>CENÁRIO:</b> Cadastro inválido e número de vagas inválido<br><br>
-GIVEN acesso a página 'Cadastrar Curso' <br>
+GIVEN que estou logado como usuário instrutor ou admin<br>
+AND acesso a página 'Cadastrar Curso' <br>
 AND preencho os campos de forma válida <br>
 AND preencho o campo 'Número de vagas' com -1 ou 0 <br>
 WHEN clico no botão Cadastrar curso <br>
@@ -174,6 +184,7 @@ Como pontos de melhorias futuras afim de melhorar a experiência do usuário na 
 - Implementação de opção de idioma em inglês para toda a plataforma incluindo os cursos possibilitando assim abertura exponencial no leque de alunos<br><br>
 - Implementação de uma seção de Status do curso para que o aluno possa acompanhar a sua evolução<br><br>
 - Implementação de um botão de compartilhamento do curso<br><br>
+- Implementação de um sistema de segurança e métricas e testes de performance garantindo assim a qualidade da experiência do usuário<br><br>
 
 
 

@@ -165,7 +165,9 @@ AND preencho os campos de forma válida <br>
 AND preencho o campo 'Número de vagas' com -1 ou 0 <br>
 WHEN clico no botão Cadastrar curso <br>
 THEN devo visualizar uma mensagem de curso não cadastrado <br>
-AND uma mensagem de aviso indicando que os campos foram preenchidos de forma incorreta<br>
+AND uma mensagem de aviso indicando que os campos foram preenchidos de forma incorreta<br><br>
+
+Link para planilha https://docs.google.com/spreadsheets/d/1V8pIjj1hTzgkfk3RVs920H_t983XB8TfUg1WmD9YJUc/edit?usp=sharing
 
 
 ## Pontos de melhoria  ![image](https://github.com/user-attachments/assets/08917731-c46c-4673-a076-3a5950bf8b93)

@@ -168,8 +168,10 @@ THEN devo visualizar uma mensagem de curso não cadastrado <br>
 AND uma mensagem de aviso indicando que os campos foram preenchidos de forma incorreta<br><br>
 
 Link para planilha: 
-<a href="https://docs.google.com/spreadsheets/d/1V8pIjj1hTzgkfk3RVs920H_t983XB8TfUg1WmD9YJUc/edit?usp=sharing" target='_blank'>Resultados dos Testes</a>
-
+<a href="https://docs.google.com/spreadsheets/d/1V8pIjj1hTzgkfk3RVs920H_t983XB8TfUg1WmD9YJUc/edit?usp=drive_link" target='_blank'>Resultados dos Testes</a>
+                                                                                                                                                          
+Link para as Evidências:
+https://docs.google.com/spreadsheets/d/1V8pIjj1hTzgkfk3RVs920H_t983XB8TfUg1WmD9YJUc/edit?usp=drive_link
 
 ## Pontos de melhoria  ![image](https://github.com/user-attachments/assets/08917731-c46c-4673-a076-3a5950bf8b93)
 

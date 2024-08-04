@@ -2,13 +2,14 @@
 
 A aplicação Beedoo Challenge, desenvolvida em plataforma WEB, foi desenvolvido para a gestão de cursos online permitindo que os instrutores efetuem o cadastro de seus cursos para que os alunos interessados possam visualizar a oferta dos cursos e realizá-los.
 
-O principal objetivo da aplicação é viabilizar de maneira fácil e intuitiva a oferta do cadastro dos cursos aos instrutores bem como a visualização dos mesmos pelos alunos proporcionando seguraça para ambos.
+O principal objetivo da aplicação é viabilizar de maneira fácil e intuitiva a oferta do cadastro dos cursos aos instrutores,
+bem como a visualização dos mesmos pelos alunos proporcionando seguraça para ambos.
    
 
 ## Tomada de Decisão  ![image](https://github.com/user-attachments/assets/02ba4cef-56ce-41d4-88c8-337b8ca78a78)
 
 
-Ao identificar as duas principais funcionalidades: Cadastro de cursos e Listagem de cursos, iremos focar em requisitos específicos:
+Ao identificar as principais funcionalidades: Cadastro de cursos, Listagem de cursos e exclusão, iremos focar em requisitos específicos:
 
 Validação e definifição de campos:
 Será utilizada uma estrutura para cada campo de maneira apropriada para que o usuário tenha uma melhor experiência na utilização mitigando possíveis erros de inserção e utilizando assim as boas práticas.
@@ -32,25 +33,25 @@ Seguiremos com as User Stories baseadas no perfil de Admin que receberá as perm
 
 <b>![image](https://github.com/user-attachments/assets/07556581-7200-47ab-8c6c-2d7406b96e37)
 Feature 'Cadastrar Curso'</b><br>
-Como usuário admin ou instrutor, <br>
-quero criar um novo curso, <br>
-para adicionar novos cursos na plataforma.
+COMO usuário admin ou instrutor, <br>
+QUERO cadastrar um novo curso, <br>
+PARA adicionar novos cursos na plataforma.
 
 Critérios de Aceite:
 
 Estar somente disponível o acesso para usuários tipo Admin e instrutor.
 O usuário deve inserir todos os dados referentes ao curso, todos os campos são obrigatórios.
 O usuário deve ser notificado caso algum campo não tenha sido preenchido de forma adequada com a sugestão de preenchimento correta.
-O usuário deve preencher o campo 'Data de Fim' com uma data superior a 'Data de Inicio'.
-O usuário deve preencher URLs válidas.
-O usuário deve preencher o número de vagas com um valor positivo maior que 1.
+O usuário deve preencher o campo 'Data de Fim' com uma data superior a 'Data de Inicio', e ser notificado caso preencha uma data inválida.
+O usuário deve preencher URLs válidas e ser notificado quando preencher de forma inválida.
+O usuário deve preencher o número de vagas com um valor positivo maior que 1 e ser notificado quando preencher incorretamente.
 O usuário deve visualizar uma mensagem de sucesso ao efetuar o cadastro do curso de forma correta.
 
 <b>![image](https://github.com/user-attachments/assets/6bbae7a0-f1db-49d5-b2a9-d477d76b12dd)
 Feature 'Listar cursos'</b><br>
-Como usuário admin ou instrutor ou aluno, <br>
-quero listar todos os cursos cadastrados na plataforma, <br>
-para visualizar e gerenciar os cursos cadastrados.
+COMO usuário admin ou instrutor ou aluno, <br>
+QUERO listar todos os cursos cadastrados na plataforma, <br>
+PARA visualizar e gerenciar os cursos cadastrados.
 
 Critérios de Aceite:
 
@@ -60,9 +61,9 @@ O usuário deve poder excluir cursos diretamente da lista de cursos.
 
 <b>![image](https://github.com/user-attachments/assets/000f8f35-8bc5-4481-b25c-76038cb9f19c)
 Feature 'Excluir cursos'</b><br>
-Como usuário admin, <br>
-quero realizar a exclusão um curso préviamente cadastrado, <br>
-para manter a plataforma atualizada e limpa.
+COMO usuário admin, <br>
+QUERO realizar a exclusão um curso préviamente cadastrado, <br>
+PARA manter a plataforma atualizada e limpa.
 
 Critérios de Aceite:
 

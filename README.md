@@ -138,24 +138,25 @@ AND uma mensagem de aviso indicando que os campos foram preenchidos de forma inc
 ![image](https://github.com/user-attachments/assets/a9ae8699-6e41-40fe-a004-18ca3f0083b1)
 <b>CENÁRIO CT-007:</b> Listar cursos <br><br>
 GIVEN que estou logado como usuário instrutor ou admin ou aluno<br>
-AND acesso a página 'Cadastrar Curso' <br>
+AND acesso a página 'Listar Curso' <br>
 WHEN clico no botão Listar cursos <br>
-THEN devo visualizar todos os cursos cadastrados <br>
+THEN devo visualizar todos os cursos previamente cadastrados <br>
 
 ![image](https://github.com/user-attachments/assets/d125bd1b-c439-4731-a7e6-9d9ab77c5f9e)
 <b>CENÁRIO CT-008:</b> Visualizar cursos <br><br>
 GIVEN que estou logado como usuário instrutor ou admin ou aluno<br>
-AND acesso a página 'Cadastrar Curso' <br>
+AND acesso a página 'Listar Curso' <br>
 AND clico no botão Listar cursos <br>
 WHEN clico no curso <br>
-THEN devo visualizar todos os dados de um curso cadastrado <br>
+THEN devo visualizar todos os dados de um curso previamente cadastrado <br>
 
 ![image](https://github.com/user-attachments/assets/e3000e02-0575-4785-857c-cd63f9df7fd9)
 <b>CENÁRIO CT-009:</b> Excluir cursos <br><br>
 GIVEN que estou logado como usuário admin<br>
-AND acesso a página 'Cadastrar Curso' <br>
+AND acesso a página 'Listar Curso' <br>
 WHEN clico em 'Excluir curso' no registro do curso a ser excluído <br>
 THEN uma mensagem de aviso indicando que a exclusão ocorreu com sucesso deverá ser visualizada<br>
+AND não devo visualizar o curso na Lista de Cursos<br>
 
 ![image](https://github.com/user-attachments/assets/c3341aa5-1a09-4c0e-ad35-d94f0dd503ef)
 <b>CENÁRIO CT-0010:</b> Cadastro inválido e número de vagas inválido<br><br>
@@ -166,6 +167,20 @@ AND preencho o campo 'Número de vagas' com -1 ou 0 <br>
 WHEN clico no botão Cadastrar curso <br>
 THEN devo visualizar uma mensagem de curso não cadastrado <br>
 AND uma mensagem de aviso indicando que os campos foram preenchidos de forma incorreta<br><br>
+
+![image](https://github.com/user-attachments/assets/c3341aa5-1a09-4c0e-ad35-d94f0dd503ef)
+<b>CENÁRIO CT-0011:</b> Teste de reload na tela listar cursos<br><br>
+GIVEN que estou logado como usuário instrutor ou admin ou aluno<br>
+AND acesso a página 'Listar Cursos' <br>
+WHEN realizo a atualização da página (Reload) <br>
+THEN devo visualizar novamente a página 'Listar Cursos' corretamente <br>
+
+![image](https://github.com/user-attachments/assets/c3341aa5-1a09-4c0e-ad35-d94f0dd503ef)
+<b>CENÁRIO CT-0012:</b> Teste de reload na tela cadastro cursos<br><br>
+GIVEN que estou logado como usuário instrutor ou admin<br>
+AND acesso a página 'Cadastrar Curso' <br>
+WHEN realizo a atualização da página (Reload) <br>
+THEN devo visualizar novamente a página 'Cadastrar Curso' corretamente <br>
 
 Link para planilha: 
 <a href="https://docs.google.com/spreadsheets/d/1V8pIjj1hTzgkfk3RVs920H_t983XB8TfUg1WmD9YJUc/edit?usp=drive_link" target="_blank">Resultados dos Testes</a>

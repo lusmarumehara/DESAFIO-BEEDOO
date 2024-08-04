@@ -32,8 +32,8 @@ Seguiremos com as User Stories baseadas no perfil de Admin que receberá as perm
 
 <b>![image](https://github.com/user-attachments/assets/07556581-7200-47ab-8c6c-2d7406b96e37)
 Feature 'Cadastrar Curso'</b><br>
-Como usuário admin ou instrutor <br>
-quero criar um novo curso <br>
+Como usuário admin ou instrutor, <br>
+quero criar um novo curso, <br>
 para adicionar novos cursos na plataforma.
 
 Critérios de Aceite:
@@ -41,15 +41,15 @@ Critérios de Aceite:
 Estar somente disponível o acesso para usuários tipo Admin e instrutor.
 O usuário deve inserir todos os dados referentes ao curso, todos os campos são obrigatórios.
 O usuário deve ser notificado caso algum campo não tenha sido preenchido de forma adequada com a sugestão de preenchimento correta.
-O usuário deve preencher o campo 'Data de Fim' com uma data superior a 'Data de Inicio'
-O usuário deve preencher URLs válidas
-O usuário deve preencher o número de vagas com um valor positivo maior que 1
+O usuário deve preencher o campo 'Data de Fim' com uma data superior a 'Data de Inicio'.
+O usuário deve preencher URLs válidas.
+O usuário deve preencher o número de vagas com um valor positivo maior que 1.
 O usuário deve visualizar uma mensagem de sucesso ao efetuar o cadastro do curso de forma correta.
 
 <b>![image](https://github.com/user-attachments/assets/6bbae7a0-f1db-49d5-b2a9-d477d76b12dd)
 Feature 'Listar cursos'</b><br>
-Como usuário admin ou instrutor ou aluno <br>
-quero listar todos os cursos cadastrados na plataforma <br>
+Como usuário admin ou instrutor ou aluno, <br>
+quero listar todos os cursos cadastrados na plataforma, <br>
 para visualizar e gerenciar os cursos cadastrados.
 
 Critérios de Aceite:
@@ -60,13 +60,13 @@ O usuário deve poder excluir cursos diretamente da lista de cursos.
 
 <b>![image](https://github.com/user-attachments/assets/000f8f35-8bc5-4481-b25c-76038cb9f19c)
 Feature 'Excluir cursos'</b><br>
-Como usuário admin <br>
-quero realizar a exclusão um curso préviamente cadastrado <br>
+Como usuário admin, <br>
+quero realizar a exclusão um curso préviamente cadastrado, <br>
 para manter a plataforma atualizada e limpa.
 
 Critérios de Aceite:
 
-Estar somente disponível o acesso para usuários tipo Admin.
+Estar somente disponível o acesso para usuários tipo Admin por motivos de segurança.
 O usuário deve conseguir realizar a exclusão de um curso a partir da lista de cursos disponíveis.
 O usuário deve visualizar uma mensagem de confirmação quando um curso for excluído com sucesso.
 O curso deve ser retirado da lista de cursos não podendo mais ser visualizado após a exclusão.
@@ -168,28 +168,28 @@ THEN devo visualizar uma mensagem de curso não cadastrado <br>
 AND uma mensagem de aviso indicando que os campos foram preenchidos de forma incorreta<br><br>
 
 Link para planilha: 
-<a href="https://docs.google.com/spreadsheets/d/1V8pIjj1hTzgkfk3RVs920H_t983XB8TfUg1WmD9YJUc/edit?usp=sharing" target="_blank">Resultados dos Testes</a>
+<a href="https://docs.google.com/spreadsheets/d/1V8pIjj1hTzgkfk3RVs920H_t983XB8TfUg1WmD9YJUc/edit?usp=sharing" target='_blank'>Resultados dos Testes</a>
 
 
 ## Pontos de melhoria  ![image](https://github.com/user-attachments/assets/08917731-c46c-4673-a076-3a5950bf8b93)
 
 
-Como pontos de melhorias futuras afim de melhorar a experiência do usuário na utilização da plataforma destaco as seguintes features.
+Como pontos de melhorias futuras afim de melhorar a experiência do usuário na utilização da plataforma, destaco as seguintes features:
 
-- Implementação de uma tela de login de usuário para diferênciar os tipo de de usuários da plataforma (Admin, Intrutor e Aluno)<br><br>
-- Implementação dos tipos de usuários: Admin (full Access), instrutor (Alterar informações do curso) e Aluno (Listar os cursos e realizá-los)<br><br>
-- Implementação de opção de editar curso para os perfis Admin e Instrutor<br><br>
-- Implementação de um limite de caracteres para o campo Nome do curso<br><br>
-- Implementação de um limite de caracteres para o campo Descrição do curso<br><br>
-- Implementação de um limite de caracteres para o campo Instrutor do curso<br><br>
-- Implementação de um valor limite no número de vagas do curso para que ele seja positivo<br><br>
-- Implementação de validação no campo data para que a data de fim do curso sempre seja posterior a data de inicio<br><br>
-- Implementação de uma opção para avaliação de curso	afim de monitorar a qualidade dos cursos ofertados mediante feedback dos alunos<br><br>
-- Implementação de acessibilidade em libras para deficientes auditivos nos cursos<br><br>
-- Implementação de opção de idioma em inglês para toda a plataforma incluindo os cursos possibilitando assim abertura exponencial no leque de alunos<br><br>
-- Implementação de uma seção de Status do curso para que o aluno possa acompanhar a sua evolução<br><br>
-- Implementação de um botão de compartilhamento do curso<br><br>
-- Implementação de um sistema de segurança e métricas e testes de performance garantindo assim a qualidade da experiência do usuário<br><br>
+- Implementação de uma tela de login de usuário para diferênciar os tipo de de usuários da plataforma (Admin, Intrutor e Aluno);<br><br>
+- Implementação dos tipos de usuários: Admin (full Access), instrutor (Alterar informações do curso) e Aluno (Listar os cursos e realizá-los);<br><br>
+- Implementação de opção de editar curso para os perfis Admin e Instrutor;<br><br>
+- Implementação de um limite de caracteres para o campo Nome do curso;<br><br>
+- Implementação de um limite de caracteres para o campo Descrição do curso;<br><br>
+- Implementação de um limite de caracteres para o campo Instrutor do curso;<br><br>
+- Implementação de um valor limite no número de vagas do curso para que ele seja positivo;<br><br>
+- Implementação de validação para que a data de fim do curso, sempre seja posterior a data de inicio;<br><br>
+- Implementação de uma opção para avaliação de curso,	afim de monitorar a qualidade dos cursos ofertados mediante feedback dos alunos;<br><br>
+- Implementação de acessibilidade em libras para deficientes auditivos nos cursos;<br><br>
+- Implementação de opção de idioma em inglês para toda a plataforma incluindo os cursos, possibilitando assim abertura exponencial no leque de alunos;<br><br>
+- Implementação de uma seção de Status do curso para que o aluno possa acompanhar a sua evolução;<br><br>
+- Implementação de um botão de compartilhamento do curso;<br><br>
+- Implementação de métricas e testes de performance e segurança, garantindo assim a qualidade da experiência do usuário.<br><br>
 
 
 
